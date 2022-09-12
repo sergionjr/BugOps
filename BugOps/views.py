@@ -14,7 +14,7 @@ def index(request):
     return HttpResponse("<h1>You have arrived on the index for the BugOps proj.<h1>")
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'registration/login.html')
 
 def datetime(request):
     dt = d.datetime.today()
