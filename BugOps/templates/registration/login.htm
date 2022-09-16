@@ -1,11 +1,16 @@
 <!-- templates/registration/login.html -->
-<link rel="stylesheet" href="styles.css">
-<h2 style="color: red;">Log in</h2>
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<h2>Log in</h2>
 <p>
     Here is a sample paragraph with a bunch of sample text
 </p>
-<form method="post">
+{% comment %} <form method="post">
     {% csrf_token %}
     {{ form.as_p}}
     <button type="submit">Log In</button>
-</form>
+</form> {% endcomment %}
