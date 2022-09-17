@@ -8,7 +8,8 @@ import datetime as d
 # from . import
 
 def home(request):
-    return HttpResponse("<h1>Arrived on the home page for BugOps!<h1>")
+    return render(request, 'base.html')
+    # return HttpResponse("<h1>Arrived on the home page for BugOps!<h1>")
 
 def index(request):
     return HttpResponse("<h1>You have arrived on the index for the BugOps proj.<h1>")
