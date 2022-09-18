@@ -14,7 +14,9 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # print(BASE_DIR)
 
 
@@ -78,7 +80,7 @@ WSGI_APPLICATION = 'BugOps.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'dbprim.sqlite3',
+        'NAME': BASE_DIR + '/' + 'dbprim.sqlite3',
     }
 }
 
@@ -119,11 +121,20 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/images/'
+
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, )
+    os.path.join(BASE_DIR, 'static')
+    
 ]
+
+
+
 print("ASDSADASDASDSDADSDSSA", BASE_DIR)
-print("BXBXBXBXBXBXBXBXBX", BASE_DIR)
+print("BXBXBXBXBXBXBXBXBX", type(BASE_DIR))
+print("6969", STATICFILES_DIRS)
+print("WAKATA", os.listdir(STATICFILES_DIRS[0]))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
