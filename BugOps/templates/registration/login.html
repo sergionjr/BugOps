@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <head>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <h2>Log in</h2>
 <p>
     Here is a sample paragraph with a bunch of sample text
 </p>
-{% comment %} <form method="post">
+<form method="post">
     {% csrf_token %}
     {{ form.as_p}}
     <button type="submit">Log In</button>
-</form> {% endcomment %}
+</form>
