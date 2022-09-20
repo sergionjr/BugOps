@@ -3,3 +3,8 @@ h2{
 }
 
 
+.login-modal {
+    margin-left: 40%;
+    margin-right: 40%;
+    position: absolute;
+}
