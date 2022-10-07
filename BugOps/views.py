@@ -17,6 +17,10 @@ def index(request):
 def login(request):
     return render(request, 'registration/login.html')
 
+def login_request(request):
+    if request.method == "POST":
+        
+
 def datetime(request):
     dt = d.datetime.today()
     return HttpResponse(f"The current datetime is {dt}")
